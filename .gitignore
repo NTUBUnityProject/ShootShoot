@@ -615,3 +615,5 @@ ShootShoot/Library/PackageCache/com.unity.visualscripting@1.8.0/Documentation~/i
 ShootShoot/Library/PackageCache/com.unity.visualscripting@1.8.0/Documentation~/images/vs-variables-get-variable-node.png
 ShootShoot/Library/PackageCache/com.unity.visualscripting@1.8.0/Documentation~/images/vs-variables-has-variable-node.png
 ShootShoot/Library/PackageCache/com.unity.visualscripting@1.8.0/Documentation~/images/vs-variables-set-variable-node.png
+.gitignore
+ShootShoot/Library/PackageCache/com.unity.collab-proxy@2.0.0/Lib/Editor/PlasticSCM/log4netPlastic.dll
