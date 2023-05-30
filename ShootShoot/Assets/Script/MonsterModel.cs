@@ -10,6 +10,8 @@ public class Monster
     public string MonsterDress { get; set; }
     public int Level { get; set; }
     public int MovingSpeed { get; set; }
+
+    public int Score { get; set; }
 }
 
 public enum AttackType
@@ -29,7 +31,8 @@ public class MonsterModel {
                 AttackType = AttackType.Melee,
                 MonsterDress = "Sparrow_LOD0",
                 Level = 1,
-                MovingSpeed = 5
+                MovingSpeed = 5,
+                Score = 1
             },
             new Monster(){
                 MonsterName = "魚",
@@ -39,7 +42,8 @@ public class MonsterModel {
                 AttackType = AttackType.Range,
                 MonsterDress = "Herring_LOD0",
                 Level = 2,
-                MovingSpeed = 7
+                MovingSpeed = 7,
+                Score = 2
             },
             new Monster(){
                 MonsterName = "猴子",
@@ -49,7 +53,8 @@ public class MonsterModel {
                 AttackType = AttackType.Melee,
                 MonsterDress = "Colobus_LOD0",
                 Level = 3,
-                MovingSpeed = 10
+                MovingSpeed = 10,
+                Score = 3
             },
             new Monster(){
                 MonsterName = "BOSS鹿",
@@ -59,7 +64,8 @@ public class MonsterModel {
                 AttackType = AttackType.Melee,
                 MonsterDress = "Pudu_LOD0",
                 Level = 4,
-                MovingSpeed = 15
+                MovingSpeed = 15,
+                Score = 4
             }
         };   
     }

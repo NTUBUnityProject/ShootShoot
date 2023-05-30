@@ -7,6 +7,7 @@ public class CubeColorizer : MonoBehaviour
 
     void Start()
     {
+        //  場地設定為70個Cube，這邊用迴圈依序變色，分為單雙號變色
         for (int i = 1; i <= 70; i++)
         {
             string cubeName = i.ToString();
