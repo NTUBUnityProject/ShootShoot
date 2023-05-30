@@ -414,6 +414,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &226427684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5131495029731022068, guid: 9d4dd85afa58a17438e34b09e8d15f77, type: 3}
+  m_PrefabInstance: {fileID: 2029043402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &226427685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226427684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ff1bdfe490ab84789ab6c90e7cb4af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &260881507
 GameObject:
   m_ObjectHideFlags: 0
@@ -6880,9 +6897,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5131495029731022068, guid: 9d4dd85afa58a17438e34b09e8d15f77, type: 3}
       propertyPath: m_Name
-      value: Set Costume_02 SD Unity-Chan
+      value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8281754945171136082, guid: 9d4dd85afa58a17438e34b09e8d15f77, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9d4dd85afa58a17438e34b09e8d15f77, type: 3}
 --- !u!1 &2043936340
 GameObject:
