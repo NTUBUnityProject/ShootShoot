@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ViewinTransformation : MonoBehaviour
+public class StartGame : MonoBehaviour
 {
-    public void StartGame()
+    public void ViewinTransformation()
     {
         SceneManager.LoadScene("Level");
     }
