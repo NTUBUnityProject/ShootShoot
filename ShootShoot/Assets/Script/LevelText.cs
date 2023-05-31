@@ -23,7 +23,8 @@ public class LevelText : MonoBehaviour
 
         if (minutes >= 4)
         {
-            SceneManager.LoadScene("ENDGAME"); // 当时间达到4:00时切换至结束游戏场景
+            //  4分鐘時結束遊戲
+            SceneManager.LoadScene("ENDGAME");
         }
     }
 

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// 此為控制角色旋轉的專案
+/// </summary>
 public class MouseLook : MonoBehaviour
 {
     public float rotateSpeed = 20f;
