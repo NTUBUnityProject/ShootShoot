@@ -1,38 +1,38 @@
 using UnityEngine;
 
 /// <summary>
-/// ¦¹¬°¨¤¦â®gÀ»¡B¥Í¦¨¤õ²y¤Î³]©w¤õ²yªì©l³t«×ªº±M®×
+/// æ­¤ç‚ºè§’è‰²å°„æ“Šã€ç”Ÿæˆç«çƒåŠè¨­å®šç«çƒåˆå§‹é€Ÿåº¦çš„å°ˆæ¡ˆ
 /// </summary>
 public class CharacterShoot : MonoBehaviour
 {
     /// <summary>
-    /// ¤õ²yªºª«¥ó
+    /// ç«çƒçš„ç‰©ä»¶
     /// </summary>
     public GameObject FireBall;
 
     /// <summary>
-    /// ¤l¼u³t«×¡A³]50¥H¤W¬İ°_¨Ó¤ñ¸û¦³³t«×·P
+    /// å­å½ˆé€Ÿåº¦ï¼Œè¨­å®š50ä»¥ä¸Šçœ‹èµ·ä¾†è¼ƒæœ‰é€Ÿåº¦æ„Ÿ
     /// </summary>
     public float speed = 50f;
 
     void Update()
     {
-        // ·Æ¹«¥ªÁäÂIÀ»¨Æ¥ó
+        // æ»‘é¼ å·¦éµé»æ“Šäº‹ä»¶
         if (Input.GetMouseButtonDown(0))  
         {
-            // ¦b¨¤¦â«e¤è¥Í¦¨ Cube¡AÀç³yµo®g¤õ²yªº·§©À¡A§Q¥Îposition¸òforward¤~¯àÅı¤l¼u´Â±×«e¤è­¸¦æ
+            // åœ¨è§’è‰²å‰æ–¹ç”Ÿæˆ Cube ï¼Œç‡Ÿé€ ç™¼å°„ç«çƒçš„æ¦‚å¿µï¼Œåˆ©ç”¨positionè·Ÿforwardæ‰èƒ½è®“å­å½ˆæœæ–œå‰æ–¹é£›è¡Œ
             Vector3 cubePosition = transform.position + transform.forward;
 
-            // «O«ù Cube ªº°ª«×(y)¬° 3¡AÁ×§Kª½±µ¼²¨ì¦aªO®ø¥¢
-            cubePosition.y = 3f; 
+            // ä¿æŒ Cube çš„é«˜åº¦(y)ç‚º 5 ï¼Œé¿å…ç›´æ¥æ’åˆ°åœ°æ¿æ¶ˆå¤±
+            cubePosition.y = 5f; 
             GameObject cube = Instantiate(FireBall, cubePosition, Quaternion.identity);
             Rigidbody cubeRigidbody = cube.GetComponent<Rigidbody>();
 
             if (cubeRigidbody != null)
             {
-                // ³]©w¤õ²yªºªì©l³t«×
+                // è¨­å®šç«çƒçš„åˆå§‹é€Ÿåº¦
                 Vector3 cubeVelocity = transform.forward * speed;
-                cubeVelocity.y = 0f; // ±Ny¶b³t«×³]¬° 0
+                cubeVelocity.y = 0f; // å°‡yè»¸è¨­å®šç‚º 0
                 cubeRigidbody.velocity = cubeVelocity;
             }
         }

@@ -1,20 +1,26 @@
 using UnityEngine;
 
 /// <summary>
-/// ¦¹¬°±±¨îCube¸I¼²¤ÏÀ³ªº±M®×
+/// æ­¤ç‚ºæ§åˆ¶Cubeç¢°æ’åæ‡‰çš„å°ˆæ¡ˆ
 /// </summary>
 public class CubeProjectile : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        //  ³oÃä®gÀ»¬°¼²¨ì¼ĞÅÒ¬°Àğ¾Àªºª«¥ó®É¡A±NCube²¾°£
+        //  é€™é‚Šå°„æ“Šç‚ºæ’åˆ°æ¨™ç±¤ç‚ºç‰†å£çš„ç‰©ä»¶æ™‚å°‡Cubeç§»é™¤
         if (collision.gameObject.CompareTag("Wall"))
         {
             Destroy(gameObject);
         }
 
-        //  ³oÃä®gÀ»¬°¼²¨ì¼ĞÅÒ¬°¦aªOªºª«¥ó®É¡A±NCube²¾°£
+        //  é€™é‚Šå°„æ“Šç‚ºæ’åˆ°æ¨™ç±¤ç‚ºåœ°æ¿çš„ç‰©ä»¶æ™‚å°‡Cubeç§»é™¤
         if (collision.gameObject.CompareTag("Floor"))
+        {
+            Destroy(gameObject);
+        }
+
+        //  é€™é‚Šå°„æ“Šç‚ºæ’åˆ°æ¨™ç±¤ç‚ºæ€ªç‰©çš„ç‰©ä»¶æ™‚å°‡Cubeç§»é™¤
+        if (collision.gameObject.CompareTag("Monster"))
         {
             Destroy(gameObject);
         }

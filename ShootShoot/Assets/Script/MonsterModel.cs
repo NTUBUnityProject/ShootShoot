@@ -6,7 +6,6 @@ public class Monster
     public int MaxHealth { get; set; }
     public int Health { get; set; }
     public int Attack { get; set; }
-    public AttackType AttackType { get; set; }
     public string MonsterDress { get; set; }
     public int Level { get; set; }
     public int MovingSpeed { get; set; }
@@ -14,11 +13,6 @@ public class Monster
     public int Score { get; set; }
 }
 
-public enum AttackType
-{
-    Melee,
-    Range
-}
 public class MonsterModel {
     public List<Monster> GetMonsters(){
         return new List<Monster> ()
@@ -28,7 +22,6 @@ public class MonsterModel {
                 MaxHealth = 200,
                 Health = 200,
                 Attack = 1,
-                AttackType = AttackType.Melee,
                 MonsterDress = "Sparrow_LOD0",
                 Level = 1,
                 MovingSpeed = 5,
@@ -39,7 +32,6 @@ public class MonsterModel {
                 MaxHealth = 200,
                 Health = 200,
                 Attack = 1,
-                AttackType = AttackType.Range,
                 MonsterDress = "Herring_LOD0",
                 Level = 2,
                 MovingSpeed = 7,
@@ -49,8 +41,7 @@ public class MonsterModel {
                 MonsterName = "猴子",
                 MaxHealth = 500,
                 Health = 500,
-                Attack = 2,
-                AttackType = AttackType.Melee,
+                Attack = 1,
                 MonsterDress = "Colobus_LOD0",
                 Level = 3,
                 MovingSpeed = 10,
@@ -60,8 +51,7 @@ public class MonsterModel {
                 MonsterName = "BOSS鹿",
                 MaxHealth = 1000,
                 Health = 1000,
-                Attack = 3,
-                AttackType = AttackType.Melee,
+                Attack = 2,
                 MonsterDress = "Pudu_LOD0",
                 Level = 4,
                 MovingSpeed = 15,
