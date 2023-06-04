@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// ¦¹¬°±±¨î¨¤¦â±ÛÂàªº±M®×
+/// æ­¤ç‚ºæ§åˆ¶è§’è‰²æ—‹è½‰çš„å°ˆæ¡ˆ
 /// </summary>
 public class MouseLook : MonoBehaviour
 {
@@ -10,25 +10,25 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
-        // §Q¥ÎÄá¼v¾÷¨ú±o·Æ¹««ü¼Ğ¦bµe­±¤Wªº¦ì¸m
+        // åˆ©ç”¨æ”å½±æ©Ÿå–å¾—æ»‘é¼ æŒ‡æ¨™åœ¨ç•«é¢ä¸Šçš„ä½ç½®
         Vector3 mousePosition = Input.mousePosition;
         mousePosition.z = cameraTransform.position.y - transform.position.y;
 
-        // ±N·Æ¹««ü¼Ğªº¦ì¸mÂà´«¬°¹CÀ¸¤ºªº®y¼Ğ
+        // å°‡æ»‘é¼ æŒ‡æ¨™çš„ä½ç½®è½‰æ›ç‚ºéŠæˆ²å…§çš„åº§æ¨™
         Vector3 targetPosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        // ±N¥Ø¼Ğ¦ì¸mªºY¶b»P¨¤¦â«O«ù¤@­P
+        // å°‡ç›®æ¨™ä½ç½®çš„Yè»¸èˆ‡è§’è‰²ä¿æŒä¸€è‡´
         targetPosition.y = transform.position.y; 
 
-        // ­pºâ¨¤¦â´Â¦V¥Ø¼Ğ¤è¦Vªº®tÃB
+        // è¨ˆç®—è§’è‰²æœå‘ç›®æ¨™æ–¹å‘çš„å·®é¡
         Vector3 direction = targetPosition - transform.position;
 
         if (direction != Vector3.zero)
         {
-            // ±N¨¤¦â´Â¦V¥Ø¼Ğ¤è¦V
+            // å°‡è§’è‰²æœå‘ç›®æ¨™æ–¹å‘
             Quaternion rotation = Quaternion.LookRotation(direction);
 
-            // ±ÛÂà¨ì¥Ø¼Ğ¤è¦V
+            // æ—‹è½‰åˆ°ç›®æ¨™æ–¹å‘
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotateSpeed * Time.deltaTime);
         }
     }

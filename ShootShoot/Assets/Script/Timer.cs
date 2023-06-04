@@ -1,29 +1,39 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     public Text timerText;
     private float timer;
+    public Text ScoreText;
 
     void Start()
     {
-        //  ªì©l®É¶¡¬°0
-        timer = 0f;
+        //  æ™‚é–“
+        timer = 180;
     }
 
     void Update()
     {
-        //  ¨C¬í+1
-        timer += Time.deltaTime;
+        //  æ™‚é–“+1
+        timer -= Time.deltaTime;
 
-        //  ®É¶¡¶W¹L1¤ÀÄÁ¥H«á¨ú¾l¼ÆÂà¦¨¤ÀÄÁ
+        //  è½‰æ›ç‚ºåˆ†
         int minutes = Mathf.FloorToInt(timer / 60f);
 
-        //  ¬í¼Æ
+        //  é™¤ä»¥60å–é¤˜æ•¸ç‚ºç§’
         int seconds = Mathf.FloorToInt(timer % 60f);
 
-        //  ©Ô¥~­±Textªºª«¥ó¶i¨Ó¡A¨Ã±N¦r¦ê®æ¦¡¤Æ
+        //  ç”¨å­—ä¸²æ ¼å¼åŒ–çš„æ–¹å¼å®šç¾©æ ¼å¼
         timerText.text = string.Format("{0}:{1:00}", minutes, seconds);
+        if(timer < 15){
+            timerText.color = Color.red;
+        }
+        if(minutes == 0 && seconds == 0)
+        {            
+            //çµæŸéŠæˆ²
+            SceneManager.LoadScene("EndGame");
+        }
     }
 }
